@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Information Form</title>
+</head>
+<body>
+
+<h2>Enter Your Information</h2>
+
+<form id="personalInfoForm">
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" name="firstName"><br><br>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" name="lastName"><br><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age"><br><br>
+
+  <button type="button" onclick="displayInfo()">Submit</button>
+</form>
+
+<script>
+  function displayInfo() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const email = document.getElementById('email').value;
+    const age = document.getElementById('age').value;
+
+    const userInfo = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      age: age
+    };
+
+    console.log("User Information:");
+    console.log(userInfo);
+  }
+</script>
+
+</body>
+</html>
